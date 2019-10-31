@@ -1,8 +1,10 @@
+[![Discord](https://discordapp.com/api/guilds/564193469682155580/widget.json)](https://discord.gg/vgNpJbv)
+
 # FnApi
 This python api library for some information in fortnite.
 This library contains: **Store, another store** (works without api key)**, items, item search, news, upcoming items**
 ***
-## Run-up
+## Getting up
 We need:
 1. Register on the site: [link](https://fnapi.me/)
 2. Create an API key on the same site
