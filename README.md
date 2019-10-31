@@ -10,6 +10,7 @@ We need:
 ***
 ## Examples
 #### shop.py
+Displays today's items in the store
 ```python
 from fnapi import Shop
 
@@ -29,6 +30,7 @@ for item in items:
     print(item.background)  #get link to item background
 ```
 #### anotherShop
+Displays today's items in the store.Does not require api key.It has several additional features.
 ```python
 from fnapi import anotherShop
 shop = anotherShop() #This shop does not require a token
@@ -47,6 +49,7 @@ for item in items:
     print(item.information)  #get item icon(with text/vbucks)
 ```
 #### News
+Displays news that appears when entering the battle royale.(and save the world)
 ```python
 from fnapi import News
 
@@ -61,6 +64,7 @@ for news in newss.get_news():
     print(news.adspace)#get adspace(up)
 ```
 #### Items
+Displays all items that are in the game (item store)
 ```python
 from fnapi import Items
 
@@ -84,6 +88,7 @@ for item in items:
    #...
 ```
 #### Upcoming
+Displays all items that have not yet appeared in the store.
 ```python
 from fnapi import Upcoming
 
