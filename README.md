@@ -1,4 +1,4 @@
-My discord: [![Discord](https://discordapp.com/api/guilds/564193469682155580/widget.png)](https://discord.gg/vgNpJbv)
+[![Discord](https://discordapp.com/api/guilds/564193469682155580/widget.png)](https://discord.gg/vgNpJbv)
 
 # FnApi
 This python api library for some information in fortnite.
