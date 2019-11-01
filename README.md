@@ -58,8 +58,8 @@ from fnapi import News
 token = 'HERE PASTE TOKEN' #register token at https://fnapi.me/
 newss = News(token)
 
-newss.get_news()
-for news in newss.get_news():
+all_news = newss.get_news()
+for news in all_news:
     print(news.title) #news title
     print(news.image) #get link to image
     print(news.text)  #get news text
