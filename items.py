@@ -14,9 +14,14 @@ class item_():
 
 class Items():
     def __init__(self,token,lang = 'eu'):
-        data = requests.get(f'https://fnapi.me/api/items/all?lang={lang}',headers = {'authorization':token}).json()
-        self.items = data['data']
-        self.token = token
+        try:
+            data = requests.get(f'https://fnapi.me/api/items/all?lang={lang}',headers = {'authorization':token}).json()
+            self.items = data['data']
+            self.token = token
+        except Exception as e:
+            print('Error: '+str(e)+'\nSite returned: '+str(data))
+            if str(data) == "{'error': 'The Authorization is invalid'}":
+                raise Exception('Token is invalid')
 
     def get_items(self):
         items = []

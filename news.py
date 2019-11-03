@@ -9,8 +9,13 @@ class News_():
 
 class News():
     def __init__(self,token,lang = 'ru'):
-        news = requests.get(f'https://fnapi.me/api/news/?lang={lang}',headers = {'authorization':token}).json()
-        self.data = news['data']
+        try:
+            news = requests.get(f'https://fnapi.me/api/news/?lang={lang}',headers = {'authorization':token}).json()
+            self.data = news['data']
+        except Exception as e:
+            print('Error: '+str(e)+'\nSite returned: '+str(news))
+            if str(news) == "{'error': 'The Authorization is invalid'}":
+                raise Exception('Token is invalid')
 
     def get_news(self):
         news = []

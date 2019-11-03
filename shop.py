@@ -19,6 +19,8 @@ class Shop():
             self.items = shop['data']
         except Exception as e:
             print('Error: '+str(e)+'\nSite returned: '+str(shop))
+            if str(shop) == "{'error': 'The Authorization is invalid'}":
+                raise Exception('Token is invalid')
         self.date = time.strftime('%d.%m.%Y')
 
     def get_items(self):

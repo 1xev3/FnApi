@@ -17,9 +17,12 @@ class item_():
 
 class anotherShop():
     def __init__(self):
-        shop = requests.get('https://fortnite-api.theapinetwork.com/store/get').json()
-        self.items = shop['data']
-        self.date = time.strftime('%d.%m.%Y')
+        try:
+            shop = requests.get('https://fortnite-api.theapinetwork.com/store/get').json()
+            self.items = shop['data']
+            self.date = time.strftime('%d.%m.%Y')
+        except Exception as e:
+            print('Error: '+str(e)+'\nSite returned: '+str(data))
 
     def get_items(self):
         items = []
