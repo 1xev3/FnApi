@@ -98,7 +98,7 @@ token = 'HERE PASTE TOKEN' #register token at https://fnapi.me/
 it = Upcoming(token)
 
 #---find one item by name
-item_find= it.find_item('Fright Funk') #name
+item_find= it.find_item('Distracted') #If not found: return's none
 print(item_find.id)      #get id
 print(item_find.name)    #get name
 print(item_find.price)   #get price
