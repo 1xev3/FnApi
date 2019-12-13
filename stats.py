@@ -12,7 +12,6 @@ class FortnitePlaylist(Enum):
     CURRENT_SQUAD = "curr_p9"
 
 class Stats:
-    base_url = "https://api.fortnitetracker.com/v1/profile/"
 
     def __init__(self, platform, user , api_key= None):
         if api_key == None:
@@ -35,7 +34,7 @@ class Stats:
         self.update_url()
 
     def update_url(self):
-        self.url = self.base_url + self.platform + "/" + self.user
+        self.url = f"https://api.fortnitetracker.com/v1/profile/{self.platform}/{self.user}/"
         if self.api_key is not None:
             self.make_request()
 
